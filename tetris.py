@@ -142,12 +142,17 @@ def draw_score():
 def draw_game_over():
     font = pygame.font.Font(None, 72)
     text = font.render('Game Over!', True, RED)
-    text_rect = text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 - 50))
+    text_rect = text.get_rect(center=(INITIAL_SCREEN_WIDTH // 2, INITIAL_SCREEN_HEIGHT // 2 - 100))
     screen.blit(text, text_rect)
+
+    font_score = pygame.font.Font(None, 48)
+    score_text = font_score.render(f'Final Score: {score}', True, WHITE)
+    score_text_rect = score_text.get_rect(center=(INITIAL_SCREEN_WIDTH // 2, INITIAL_SCREEN_HEIGHT // 2))
+    screen.blit(score_text, score_text_rect)
 
     font_small = pygame.font.Font(None, 48)
     replay_text = font_small.render('Press R to Replay or Q to Quit', True, WHITE)
-    replay_text_rect = replay_text.get_rect(center=(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 50))
+    replay_text_rect = replay_text.get_rect(center=(INITIAL_SCREEN_WIDTH // 2, INITIAL_SCREEN_HEIGHT // 2 + 100))
     screen.blit(replay_text, replay_text_rect)
 
 
@@ -220,6 +225,7 @@ def game_loop():
     pygame.quit()
 
 game_loop()
+
 
 
 
