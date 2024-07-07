@@ -1,6 +1,3 @@
-Sure, here's the complete README file in markdown format:
-
-```markdown
 # Tetris Game
 
 ## Overview
